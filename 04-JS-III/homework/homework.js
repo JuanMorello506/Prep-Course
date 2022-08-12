@@ -58,7 +58,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join(' ');
+  var respuesta = palabras [0];
+  for (var i = 0; i < palabras.length; i++) {
+    respuesta = respuesta + " " + palabras [i];
+  }
+  return respuesta;
+  
 }
 
 
@@ -233,7 +238,9 @@ function breakStatement(numero) {
   var suma = numero;
   for(var i= 0; i<10; i++) {
     suma = suma + 2;
-    if(suma === i) break;
+    if(suma === i) {
+    break;
+    }
     else {
       array.push(suma);
     }
